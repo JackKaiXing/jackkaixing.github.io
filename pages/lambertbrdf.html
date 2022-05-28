@@ -4,7 +4,8 @@
     <head>
         <style>
             .header{width: 1000px; height: 0px auto;;margin: 0px auto;}
-            .section{width: 1000px; height: 1000px;margin: 0px auto;}
+            .section{width: 1000px; height: 0px auto;margin: 0px auto;}
+            .navi{width: 1000px; height: 0px auto;margin: 0px auto;}
         </style>
     </head>
     <body>
@@ -23,6 +24,13 @@
                 <span class="math display">\[\rho =\int_{\Omega}f_r(x,\omega_i,\omega_o)  (\omega_o . n) d\omega_o \]</span>
                 The <span class="math display">\[f_r(x,\omega_i,\omega_o)\]</span> is constant for lambert reflection for any viewing angle and could be moved out of integration. Then rest of the derivation follows as mentioned before.<br/><br/>
                 Note: If the BRDF is reciprocal, then the hemispherical-directional reflectance and the directional-hemispherical reflectance are equal and the same function can be used to compute either one.
+                <span class="math display">\[\int_{\Omega}(\omega_o . n)d\omega_o = \pi \]</span>
+                <span class="math display">\[f_r(x,\omega_i,\omega_o) = lambert_BRDF = \frac{\rho}{\pi}\]</span>    
+            </p>
+        </div>
+        <div class="navi">
+            <p>
+                <a href="./../index.html">Home</a>
             </p>
         </div>
     </body>
