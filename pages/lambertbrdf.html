@@ -1,4 +1,6 @@
 <html>
+    <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
     <head>
         <style>
             .header{width: 1000px; height: 0px auto;;margin: 0px auto;}
@@ -13,9 +15,14 @@
             <p >
                 Lambert BRDF is just one kind of <a href="https://en.wikipedia.org/wiki/Bidirectional_reflectance_distribution_function">BRDF</a>,
                 that used to decribe how light reflect in the Lambert way. We use it because we assume the property of material belongs to this Lambert way, i.e."ideal matte".
-                Like many other concepts in Computer Graphics field, this is contribution of both thoery assumption and experimental observation.
-
-                
+                Like many other concepts in Computer Graphics field, this is contribution of both thoery assumption and experimental observation.<br/><br/>
+                The other question is about how to derive the mathmatical expression of Lambert BRDF. Here is two result, <a href="https://sakibsaikia.github.io/graphics/2019/09/10/Deriving-Lambertian-BRDF-From-First-Principles.html">Deriving Lambertian BRDF from first principles</a> and 
+                <a href="https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-shading/diffuse-lambertian-shading">Diffuse or Lambertian Shading</a>. 
+                Compared with those two, what confused me is about the definition of albedo, defined as " the ratio of reflected radiation from a surface to the amount of radiation that hits it" without
+                mentioning "directions". In <a href="https://www.realtimerendering.com/">Real-Time-Renderig-4th</a>, it mentions "directional-hemispherical reflectance" also "hemispherical-directional reflectance", which I believe the former is the albedo.
+                <span class="math display">\[\rho =\int_{\Omega}f_r(x,\omega_i,\omega_o)  (\omega_o . n) d\omega_o \]</span>
+                The <span class="math display">\[f_r(x,\omega_i,\omega_o)\]</span> is constant for lambert reflection for any viewing angle and could be moved out of integration. Then rest of the derivation follows as mentioned before.<br/><br/>
+                Note: If the BRDF is reciprocal, then the hemispherical-directional reflectance and the directional-hemispherical reflectance are equal and the same function can be used to compute either one.
             </p>
         </div>
     </body>
