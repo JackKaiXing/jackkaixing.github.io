@@ -1,0 +1,59 @@
+<html>
+    <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <head>
+        <style>
+            .header{width: 1000px; height: 0px auto;;margin: 0px auto;}
+            .section{width: 1000px; height: 0px auto;margin: 0px auto;}
+            .navi{width: 1000px; height: 0px auto;margin: 0px auto;}
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1 align="center">BRDF: Any other diffuse BRDF?</h1>
+        </div>
+        <div class="section">
+            <p >
+                Lambertian diffuse brdf is commonly used, which is developed in 1760, more than two hundred years ago. Is there anything better?</p><br/>
+                As the wiki of <a href="https://en.wikipedia.org/wiki/Oren%E2%80%93Nayar_reflectance_model">Oren–Nayar reflectance model</a> points out that "The Lambertian model 
+                is an inadequate approximation of the diffuse component. This is primarily because the Lambertian model does not take the roughness of the surface into account."><br/><br/>
+                <table border="1", align="center">
+                    <tr>
+                        <td>Name</td>
+                        <td>Data</td>
+                        <td>How</td>
+                        <td>Result</td>
+                        <td>Price</td>
+                    </tr>
+                    <tr>
+                        <td>Lambert</td>
+                        <td>1760</td>
+                        <td>View-Independent</td>
+                        <td>common, big visul difference from real image</td>
+                        <td>Low Computing cost</td>
+                    </tr>
+                    <tr>
+                        <td>Hanrahan and Krueger </td>
+                        <td>1993</td>
+                        <td>a diffuse BRDF model that approximates subsurface transport</td>
+                        <td>to do</td>
+                        <td>to do</td>
+                    </tr>
+                    <tr>
+                        <td>Oren–Nayar</td>
+                        <td>1994</td>
+                        <td>View-Dependent, based on micro-facet model using roughness and each facet is Lambertian (diffuse)</td>
+                        <td>better than Lambert, close to real image but still visual difference</td>
+                        <td>High Computing cost, expecially for shaders</td>
+                    </tr>
+                </table><br/>
+                There is a "Selected history of BRDF models used in graphics", in the paper <a href="https://media.disneyanimation.com/uploads/production/publication_asset/48/asset/s2012_pbs_disney_brdf_notes_v3.pdf">Physically Based Shading at Disney</a>.
+            </p>
+        </div>
+        <div class="navi">
+            <p>
+                <a href="./../index.html">Home</a>
+            </p>
+        </div>
+    </body>
+</html>
