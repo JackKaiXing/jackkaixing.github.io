@@ -1,0 +1,56 @@
+<html>
+    <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <head>
+        <style>
+            .header{width: 1000px; height: 0px auto;;margin: 0px auto;}
+            .section{width: 1000px; height: 0px auto;margin: 0px auto;}
+            .navi{width: 1000px; height: 0px auto;margin: 0px auto;}
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1 align="center">BRDF: Which One is Good to Me?</h1>
+        </div>
+        <div class="section">
+            <p >
+                Choosing a BRDF is to decide what you want to present. It is kind of a question of your Product Design. 
+                First of all, there is no absolutely accurate physical shading, even through there are engines teams claim so, while the equation of the under BRDF differs from each other.
+                Second, rendering is not just a technical work but involving art work, and remember that physical is not equal to beautiful or pleasing.</p><br/>
+
+                I looked into some engines, experienced their user functions and concludes as follows.
+                
+                <table border="1", align="center">
+                    <tr>
+                        <td>Engine Name</td>
+                        <td>Why</td>
+                        <td>How</td>
+                    </tr>
+                    <tr>
+                        <td>Blender:Workbench</td>
+                        <td>Super Fast and a clear view for scene structure visualization, i.e. modeling/transforming</td>
+                        <td>G_Buffer for performance, Blinn-Phong and Wrap Shading for appearance, Studio Lights for a clear view of different objects/mehsParts</td>
+                    </tr>
+                    <tr>
+                        <td>Disney BRDF Explorer</td>
+                        <td>A uniform model and a uniform set of paramters to be capable to capture lots of effects and artistic pleasing</td>
+                        <td>This is more computation intense, usually coupled with a fully physical rendering pipeline(lighting/shadowing/IBL/Some other screen sapce effect) and using only this makes non-sense. It expects its output to be product level.</td>
+                    </tr>
+                    <tr>
+                        <td>Luxcore</td>
+                        <td>Why</td>
+                        <td>How</td>
+                    </tr>
+                </table><br/>
+                <a href="https://media.disneyanimation.com/uploads/production/publication_asset/48/asset/s2012_pbs_disney_brdf_notes_v3.pdf">Disney BRDF: Physically Based Shading at Disney</a><br/>
+                <a href="https://github.com/wdas/brdf/blob/main/src/brdfs/disney.brdf">Disney BRDF: The Disney BRDF Explorer, GLSL</a><br/>
+                <a href="https://github.com/blender/blender/blob/master/source/blender/draw/engines/workbench/shaders/workbench_world_light_lib.glsl">Blender WorkdBench Lighting BRDF</a>
+            </p>
+        </div>
+        <div class="navi">
+            <p>
+                <a href="./../index.html">Home</a>
+            </p>
+        </div>
+    </body>
+</html>
